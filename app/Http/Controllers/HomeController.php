@@ -9,8 +9,18 @@ class HomeController extends Controller
     public function index(Request $request)
     {
         // return view('welcome');
+        
         return [
-            'name' => 'John Doe',
+            'name' => $request->path(),
+            'age' => 30,
+        ];
+    }
+    public function about(Request $request)
+    {
+        // return view('welcome');
+        
+        return [
+            'name' => $request->path(),
             'age' => 30,
         ];
     }
