@@ -17,10 +17,9 @@ class HomeController extends Controller
     }
     public function about(Request $request)
     {
-        // return view('welcome');
         
         return [
-            'name' => $request->path(),
+            'name' => $request->all(),
             'age' => 30,
         ];
     }
