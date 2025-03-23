@@ -22,7 +22,10 @@ class PostController extends Controller
         // $titles = Post::pluck('title');
         // dd($titles);
 
-        $posts = Post::select('id', 'title')->get();
+        // $posts = Post::select('id', 'title')->get();
+        // dd($posts);
+
+      $posts = Post::orderBy('created_at', 'desc')->get();
         dd($posts);
 
        return $posts;
