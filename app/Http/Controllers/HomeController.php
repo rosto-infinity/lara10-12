@@ -19,7 +19,7 @@ class HomeController extends Controller
     {
         
         return [
-            'name' => $request->all(),
+            'name' => $request->input('name','sohan'),
             'age' => 30,
         ];
     }
