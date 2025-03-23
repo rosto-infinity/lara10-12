@@ -12,10 +12,16 @@ class PostController extends Controller
      */
     public function index()
     {
+        $posts = Post::all();
         // $posts = Post::findOrFail(20);
         // $posts = Post::where('title', 'published')->get();
-        $posts = Post::where('title', 'Mon article')->first();
-        dd($posts);
+        // $post = Post::where('title', 'Mon article')->first();
+        // $post = Post::where('title', 'Mon article')->firstOrFail();
+        // dd($post);
+        // dd($posts);
+        $titles = Post::pluck('title');
+        dd($titles);
+
        return $posts;
     }
 
