@@ -13,7 +13,10 @@
     </head>
     <body class="bg-[#FDFDFC] dark:bg-[#0a0a0a] text-[#1b1b18] flex p-6 lg:p-8 items-center lg:justify-center min-h-screen flex-col">
            <h1 class="text-4xl font-bold">Welcome to Laravel</h1>
-//kkkkkkkkkkkkkkkkkkk
+        h2 class="text-2xl font-semibold">This is a Vite + Laravel starter template</h2>
+        <p class="text-lg">Edit <code>resources/views/welcome.blade.php</code> to get started</p>
+        
+               
       
     </body>
 </html>
