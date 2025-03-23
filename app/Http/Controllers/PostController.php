@@ -46,9 +46,9 @@ class PostController extends Controller
     public function show(string $slug, string $id):RedirectResponse | Post
     {
         $post = Post::findOrFail($id);
+        // dd($post);
         if ($post->slug !== $slug) {
             return  to_route('posts.show', ['id' => $post->id, 'slug' => $post->slug], 301);
-        // dd($post);
         return $post;
        }
    }
