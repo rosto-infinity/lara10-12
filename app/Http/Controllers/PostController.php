@@ -12,7 +12,8 @@ class PostController extends Controller
      */
     public function index()
     {
-        $posts = Post::findOrFail(20);
+        // $posts = Post::findOrFail(20);
+        $posts = Post::where('title', 'published')->get();
         dd($posts);
        return $posts;
     }
