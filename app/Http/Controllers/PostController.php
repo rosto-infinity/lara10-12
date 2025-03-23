@@ -25,8 +25,15 @@ class PostController extends Controller
         // $posts = Post::select('id', 'title')->get();
         // dd($posts);
 
-      $posts = Post::orderBy('created_at', 'desc')->get();
-        dd($posts);
+    //   $posts = Post::orderBy('created_at', 'desc')->get();
+    //     dd($posts);
+
+//     $posts = Post::limit(3)->get();
+// // Retourne les 5 premiers posts
+
+//         dd($posts);
+        $total = Post::count();
+        dd($total);
 
        return $posts;
     }
