@@ -19,8 +19,11 @@ class PostController extends Controller
         // $post = Post::where('title', 'Mon article')->firstOrFail();
         // dd($post);
         // dd($posts);
-        $titles = Post::pluck('title');
-        dd($titles);
+        // $titles = Post::pluck('title');
+        // dd($titles);
+
+        $posts = Post::select('id', 'title')->get();
+        dd($posts);
 
        return $posts;
     }
