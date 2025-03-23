@@ -6,7 +6,7 @@ use App\Http\Controllers\PostController;
 
 Route::get('/', [HomeController::class, 'index']);
 Route::get('/about', [HomeController::class, 'about']); 
-Route::get('/posts', [PostController::class, 'index']);
+Route::get('/posts', [PostController::class, 'index'])->name('posts.show');
 Route::get('/posts/{slug}-{id}', [PostController::class, 'show'])
 ->where([
   'slug' => '[a-z0-9-]+',
