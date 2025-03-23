@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Models\Post;
 use Illuminate\Http\Request;
+use Illuminate\Http\RedirectResponse;
+
 
 class PostController extends Controller
 {
@@ -41,7 +43,15 @@ class PostController extends Controller
 
        return $posts;
     }
-
+    public function show(string $slug, string $id):RedirectResponse | Post
+    {
+        $post = Post::findOrFail($id);
+        if ($post->slug !== $slug) {
+            return  to_route('posts.show', ['id' => $post->id, 'slug' => $post->slug], 301);
+        // dd($post);
+        return $post;
+       }
+   }
     /**
      * Show the form for creating a new resource.
      */
@@ -58,13 +68,7 @@ class PostController extends Controller
         //
     }
 
-    /**
-     * Display the specified resource.
-     */
-    public function show(string $id)
-    {
-        //
-    }
+   
 
     /**
      * Show the form for editing the specified resource.
