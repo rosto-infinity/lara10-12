@@ -12,8 +12,8 @@ class PostController extends Controller
      */
     public function index()
     {
-        $posts = Post::all();
-        dd($posts[0]->title);
+        $posts = Post::find(2);
+        dd($posts);
        return $posts;
     }
 
