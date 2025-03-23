@@ -34,8 +34,10 @@ class PostController extends Controller
 //         dd($posts);
         // $total = Post::count();
         // dd($total);
-        list($first, $second, $third) = Post::orderBy('created_at', 'desc')->take(3)->get();
-        dd($first, $second, $third);
+        // list($first, $second, $third) = Post::orderBy('created_at', 'desc')->take(3)->get();
+        // dd($first, $second, $third);
+        $posts = Post::orderBy('created_at', 'desc')->paginate(2);
+        // dd($posts);
 
        return $posts;
     }
