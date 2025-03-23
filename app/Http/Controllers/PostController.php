@@ -12,7 +12,7 @@ class PostController extends Controller
      */
     public function index()
     {
-        $posts = Post::find(2);
+        $posts = Post::findOrFail(20);
         dd($posts);
        return $posts;
     }
