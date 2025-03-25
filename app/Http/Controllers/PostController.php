@@ -39,7 +39,7 @@ class PostController extends Controller
         // list($first, $second, $third) = Post::orderBy('created_at', 'desc')->take(3)->get();
         // dd($first, $second, $third);
         // dd($posts);
-        $posts = Post::orderBy('created_at', 'desc')->paginate(2);
+        $posts = Post::orderBy('created_at', 'desc')->paginate(3);
 
        return  view('blog.index', compact('posts'));
     }
