@@ -14,7 +14,7 @@ class PostController extends Controller
      */
     public function index()
     {
-        $posts = Post::all();
+        // $posts = Post::paginate(2);
         // $posts = Post::findOrFail(20);
         // $posts = Post::where('title', 'published')->get();
         // $post = Post::where('title', 'Mon article')->first();
@@ -38,10 +38,10 @@ class PostController extends Controller
         // dd($total);
         // list($first, $second, $third) = Post::orderBy('created_at', 'desc')->take(3)->get();
         // dd($first, $second, $third);
-        $posts = Post::orderBy('created_at', 'desc')->paginate(2);
         // dd($posts);
+        $posts = Post::orderBy('created_at', 'desc')->paginate(2);
 
-       return $posts;
+       return  view('blog.index');
     }
     public function show(string $slug, string $id):RedirectResponse | Post
     {
