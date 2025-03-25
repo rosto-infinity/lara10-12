@@ -48,7 +48,7 @@ class PostController extends Controller
         $post = Post::findOrFail($id);
         // dd($post);
         if ($post->slug !== $slug) {
-            return  to_route('posts.show', ['id' => $post->id, 'slug' => $post->slug], 301);
+            return  to_route('blog.show', ['id' => $post->id, 'slug' => $post->slug], 301);
         }
         return $post;
    }
