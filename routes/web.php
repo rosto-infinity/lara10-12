@@ -7,13 +7,12 @@ use App\Http\Controllers\PostController;
 Route::get('/', [HomeController::class, 'index']);
 Route::get('/about', [HomeController::class, 'about']); 
 
-Route::prefix('/blog')->group( function (){
-  
-  Route::get('/', [PostController::class, 'index'])->name('blog.show');
-  Route::get('/{slug}-{id}', [PostController::class, 'show'])->where([
+Route::prefix('/blog')->controller(PostController::class)->group( function (){ 
+  Route::get('/', 'index')->name('blog.index');
+  Route::get('/{slug}-{id}', 'show')->where([
     'id' => '[0-9]+',
     'slug' => '[a-z0-9\-]+',
-    ])->name('show');
+    ])->name('blog.show');
 });
 
 
