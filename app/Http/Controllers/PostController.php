@@ -41,7 +41,7 @@ class PostController extends Controller
         // dd($posts);
         $posts = Post::orderBy('created_at', 'desc')->paginate(2);
 
-       return  view('blog.index');
+       return  view('blog.index', compact('posts'));
     }
     public function show(string $slug, string $id):RedirectResponse | Post
     {
