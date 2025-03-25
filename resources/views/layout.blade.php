@@ -13,13 +13,16 @@
     </head>
     <body class="bg-[#FDFDFC] dark:bg-[#0a0a0a]  text-[#1b1b18]">
         <header class="p-5 bg-green-700 text-white">
-        <nav>
-            <ul class="flex gap-2">
-                <li><a href="">Blog</a></li>
-                <li><a href="">Blog</a></li>
-            </ul>
-        </nav>
+            <nav class="container mx-auto">
+                <ul class="flex flex-wrap justify-between items-center gap-4">
+                    <li><a href="" class="hover:text-green-300 transition duration-300">Blog</a></li>
+                    <li><a href="" class="hover:text-green-300 transition duration-300">À propos</a></li>
+                    <li><a href="" class="hover:text-green-300 transition duration-300">Contact</a></li>
+                    <li><a href="" class="hover:text-green-300 transition duration-300">Archives</a></li>
+                </ul>
+            </nav>
         </header>
+        
         <div class="p-2.5">  
             @yield('content')
         </div>   
