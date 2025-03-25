@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Laravel</title>
+        <title>Mon blog/title>
 
         <!-- Fonts -->
         <link rel="preconnect" href="https://fonts.bunny.net">
@@ -12,13 +12,9 @@
      @vite(['resources/css/app.css', 'resources/js/app.js'])   
     </head>
     <body class="bg-[#FDFDFC] dark:bg-[#0a0a0a] text-[#1b1b18] flex p-6 lg:p-8 items-center lg:justify-center min-h-screen flex-col">
-           <h1 class="text-4xl font-bold">Welcome to Laravel</h1>
+         
            
-        h2 class="text-2xl font-semibold">This is a Vite + Laravel starter template</h2>
-        <p class="text-lg">Edit <code>resources/views/welcome.blade.php</code> to get started</p>
-        
-          
-        
+        @yield('content')
                
       
     </body>
