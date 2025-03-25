@@ -7,16 +7,13 @@ use App\Http\Controllers\PostController;
 Route::get('/', [HomeController::class, 'index']);
 Route::get('/about', [HomeController::class, 'about']); 
 
+Route
+
 Route::get('/blog', [PostController::class, 'index'])->name('blog.show');
-Route::get('/blog/{slug}-{id}', [PostController::class, 'show'])
-
-
-
-
-->where([
-  'slug' => '[a-z0-9-]+',
-   'id' => '[0-9]+'
-  ]);
+Route::get('/blog/{slug}-{id}', [PostController::class, 'show'])->where([
+  'id' => '[0-9]+',
+  'slug' => '[a-z0-9\-]+',
+  ])->name('show');
 
 
 

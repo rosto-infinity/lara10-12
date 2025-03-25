@@ -43,14 +43,14 @@ class PostController extends Controller
 
        return  view('blog.index', compact('posts'));
     }
-    public function show(string $slug, string $id):RedirectResponse | Post
+    public function show(string $slug, string $id)
     {
         $post = Post::findOrFail($id);
         // dd($post);
         if ($post->slug !== $slug) {
-            return  to_route('blog.show', ['id' => $post->id, 'slug' => $post->slug], 301);
+            return  to_route('blog.show', ['slug' => $post->slug, 'id' => $post->id], 301);
         }
-        return $post;
+        return  view('blog.show', compact('post'));
    }
 
     /**
