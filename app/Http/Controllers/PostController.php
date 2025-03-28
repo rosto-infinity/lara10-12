@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+
+
 use App\Models\Post;
 use Illuminate\Http\Request;
 use Illuminate\Http\RedirectResponse;
@@ -70,8 +72,9 @@ class PostController extends Controller
         $post =Post::create([
             'title'=> $request->input('title'),
             'content'=> $request->input('content'),
-            'slug'=> \Str::slug($request->input('title'))
+            'slug'=> Str::slug($request->input('title'))
         ]);
+     
         // dd($request->all());
     }
 
