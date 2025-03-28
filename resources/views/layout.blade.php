@@ -17,8 +17,8 @@
         <header class="p-5 bg-green-700 text-white">
             <nav class="container mx-auto">
                 <ul class="flex flex-wrap justify-between items-center gap-4">
-                    <li><a href="" class="hover:text-green-300 transition duration-300">Blog</a></li>
-                    <li><a href="" class="hover:text-green-300 transition duration-300">À propos</a></li>
+                    <li><a href="{{ route('blog.index')}}" class="hover:text-green-300 transition duration-300">Blog</a></li>
+                    <li><a href="{{ route('blog.create')}}" class="hover:text-green-300 transition duration-300">New article</a></li>
                     <li><a href="" class="hover:text-green-300 transition duration-300">Contact</a></li>
                     <li><a href="" class="hover:text-green-300 transition duration-300">Archives</a></li>
                 </ul>
