@@ -67,7 +67,7 @@ class PostController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        dd($request->all());
     }
 
    
@@ -77,7 +77,7 @@ class PostController extends Controller
      */
     public function edit(string $id)
     {
-        //
+        
     }
 
     /**
