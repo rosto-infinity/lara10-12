@@ -67,7 +67,12 @@ class PostController extends Controller
      */
     public function store(Request $request)
     {
-        dd($request->all());
+        $post =Post::create([
+            'title'=> $request->input('title'),
+            'content'=> $request->input('content'),
+            'slug'=> \Str::slug($request->input('title'))
+        ]);
+        // dd($request->all());
     }
 
    
