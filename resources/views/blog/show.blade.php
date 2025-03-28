@@ -1,3 +1,5 @@
+{{-- resources/views/blog/show.blade.php --}}
+
 @extends('layout')
 @section('title', 'Page article')
 @section('content')

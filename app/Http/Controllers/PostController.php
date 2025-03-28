@@ -45,6 +45,7 @@ class PostController extends Controller
     }
     public function show(string $slug, string $id)
     {
+        
         $post = Post::findOrFail($id);
         // dd($post);
         if ($post->slug !== $slug) {

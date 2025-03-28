@@ -1,3 +1,4 @@
+{{-- resources/views/blog/index.blade.php --}}
 @extends('layout')
 @section('title', 'Accueil Blog-Prof---')
 @section('content')
