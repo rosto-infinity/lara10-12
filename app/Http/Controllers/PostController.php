@@ -75,8 +75,10 @@ class PostController extends Controller
             'content'=> $request->input('content'),
             'slug'=> Str::slug($request->input('title'))
         ]);
-     
-        // dd($request->all());
+    
+       // Utilisation de $post pour récupérer slug et id
+    return redirect()->route('blog.show', ['slug' => $post->slug, 'id' => $post->id])
+    ->with('success', 'Article créé avec succès');
     }
 
    
