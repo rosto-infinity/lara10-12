@@ -74,7 +74,7 @@ class PostController extends Controller
         $post =Post::create($request->validated());
     
        // Utilisation de $post pour récupérer slug et id
-    return redirect()->route('blog.show', ['slug' => $post->slug, 'id' => $post->id])
+    return redirect()->route('blog.show', ['slug' => $post->slug, 'post' => $post->id])
     ->with('success', 'Article créé avec succès');
     }
 

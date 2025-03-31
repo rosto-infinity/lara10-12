@@ -32,7 +32,9 @@
         <div>
             <label for="content" class="block text-sm font-medium text-gray-700">Contenu</label>
             <textarea name="content" id="content" rows="5" 
-                      class="w-full mt-1 p-2 border border-gray-300 rounded-lg focus:ring focus:ring-green-200 focus:border-green-500"></textarea>
+            value=""
+            placeholder="Écrivez votre article ici..."
+                      class="w-full mt-1 p-2 border border-gray-300 rounded-lg focus:ring focus:ring-green-200 focus:border-green-500">{{ old('content') }}</textarea>
             @error('content')
                 <p class="text-red-500 text-sm mt-1">
                   {{-- Le champ contenu est obligatoire. --}}
