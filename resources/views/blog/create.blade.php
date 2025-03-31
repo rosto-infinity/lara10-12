@@ -9,6 +9,7 @@
         <div>
             <label for="title" class="block text-sm font-medium text-gray-700">Titre</label>
             <input type="text" name="title" id="title"  value="{{ old('title') }}"
+            placeholder="Titre de l'article"
                    class="w-full mt-1 p-2 border border-gray-300 rounded-lg focus:ring focus:ring-green-200 focus:border-green-500">
                    
             @error('title')
@@ -21,6 +22,7 @@
         <div>
             <label for="slug" class="block text-sm font-medium text-gray-700">Slug</label>
             <input type="text" name="slug" id="slug" value="{{ old('slug') }}"
+            placeholder="Slug de l'article"
                    class="w-full mt-1 p-2 border border-gray-300 rounded-lg focus:ring focus:ring-green-200 focus:border-green-500">
             @error('slug')
                 <p class="text-red-500 text-sm mt-1">
