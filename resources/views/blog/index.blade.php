@@ -2,14 +2,15 @@
 @extends('layout')
 @section('title', 'Accueil Blog-Prof---')
 @section('content')
-<h1 class="text-4xl font-bold text-center mb-6">Mon blog</h1>
-<div  class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
- 
-  
-   
- 
-@foreach ($posts as $post)
 
+<div  class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+  <div class="col-span-1 md:col-span-2 lg:col-span-3 mb-4">
+    <h1 class="text-4xl font-bold text-center mb-6">Mon blog</h1>
+  </div>
+  <div class="col-span-1 md:col-span-2 lg:col-span-3 mb-4">
+    <p class="text-gray-700 text-base text-center">Bienvenue sur mon blog ! Ici, je partage mes réflexions, mes découvertes et mes passions. N'hésitez pas à explorer les articles ci-dessous.</p>
+  </div>
+@foreach ($posts as $post)
 
   <article class="border p-4 rounded-lg shadow-md mb-4">
     <h2 class="text-green-500 text-2xl font-semibold pb-2 pt-7">{{ $post->title }}</h2>

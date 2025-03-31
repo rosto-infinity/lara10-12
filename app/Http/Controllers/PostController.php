@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 
-
+use Illuminate\Support\Str;
 use App\Models\Post;
 use Illuminate\Http\Request;
 use Illuminate\Http\RedirectResponse;
@@ -45,13 +45,14 @@ class PostController extends Controller
 
        return  view('blog.index', compact('posts'));
     }
+    // public function show(string $slug, string $id)
     public function show(string $slug, string $id)
     {
         
         $post = Post::findOrFail($id);
         // dd($post);
         if ($post->slug !== $slug) {
-            return  to_route('blog.show', ['slug' => $post->slug, 'id' => $post->id], 301);
+            return  to_route('blog.show', ['slug' => $post->slug, 'id' => $post->id]);
         }
         return  view('blog.show', compact('post'));
    }
