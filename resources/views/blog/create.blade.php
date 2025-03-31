@@ -8,13 +8,26 @@
         
         <div>
             <label for="title" class="block text-sm font-medium text-gray-700">Titre</label>
-            <input type="text" name="title" id="title" value="Article de démonstration" 
+            <input type="text" name="title" id="title"  value="{{ old('title') }}"
                    class="w-full mt-1 p-2 border border-gray-300 rounded-lg focus:ring focus:ring-green-200 focus:border-green-500">
+                   
+            @error('title')
+                <p class="text-red-500 text-sm mt-1">
+                  {{-- Le champ titre est obligatoire. --}}
+                  {{ $message }}
+                </p>
+            @enderror
         </div>
         <div>
             <label for="content" class="block text-sm font-medium text-gray-700">Contenu</label>
             <textarea name="content" id="content" rows="5" 
-                      class="w-full mt-1 p-2 border border-gray-300 rounded-lg focus:ring focus:ring-green-200 focus:border-green-500">Contenu de démonstration</textarea>
+                      class="w-full mt-1 p-2 border border-gray-300 rounded-lg focus:ring focus:ring-green-200 focus:border-green-500"></textarea>
+            @error('content')
+                <p class="text-red-500 text-sm mt-1">
+                  {{-- Le champ contenu est obligatoire. --}}
+                  {{ $message }}
+                </p>
+            @enderror
         </div>
         <button type="submit" 
                 class="w-full bg-green-500 text-white p-2 rounded-lg hover:bg-green-600 transition">Enregistrer</button>
