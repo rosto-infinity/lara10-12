@@ -93,9 +93,19 @@ class PostController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, string $id)
+    public function update(CreatePostRequest $request, Post $post)
     {
+        // dd($request->validated());
+        // dd($post);
+        // dd($request->all());
+        // dd($request->input('slug'));
+        // dd($request->input('title'));
+        // dd($request->input('content'));
+        // dd($post->id);
+        // dd($post->slug);
+    
         //
+        $post->update($request->validated());
     }
 
     /**
