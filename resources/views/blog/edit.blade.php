@@ -36,7 +36,7 @@
             <textarea name="content" id="content" rows="5" 
             value=""
             placeholder="Écrivez votre article ici..."
-                      class="w-full mt-1 p-2 border border-gray-300 rounded-lg focus:ring focus:ring-green-200 focus:border-green-500">{{ old('content') }}</textarea>
+                      class="w-full mt-1 p-2 border border-gray-300 rounded-lg focus:ring focus:ring-green-200 focus:border-green-500">{{ old('content', $post->content) }}</textarea>
             @error('content')
                 <p class="text-red-500 text-sm mt-1">
                   {{-- Le champ contenu est obligatoire. --}}
