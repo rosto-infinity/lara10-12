@@ -18,6 +18,7 @@ Route::prefix('/blog')->controller(PostController::class)->group( function (){
     'slug' => '[a-z0-9\-]+',
     ])->name('blog.show');
   Route::get('/{post}/edit', 'edit')->name('edit');  
+  Route::post('/{post}/edit', 'update');  
 });
 
 
