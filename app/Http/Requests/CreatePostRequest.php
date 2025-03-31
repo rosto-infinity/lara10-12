@@ -24,7 +24,7 @@ class CreatePostRequest extends FormRequest
     {
         return [
             'title' => ['required', 'string', 'min:8'], // Règles pour le titre
-            'slug' => ['required', 'string', 'max:255', 'unique:posts,slug'], // Règles pour le slug
+            'slug' => ['required', 'string', 'max:255', 'unique:posts'], // Règles pour le slug
             'content' => ['required', 'string', 'min:20'], // Règles pour le contenu
         ];
     }

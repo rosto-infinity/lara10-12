@@ -62,7 +62,7 @@ class PostController extends Controller
      */
     public function create()
     {
-        dd(session()->all());
+        // dd(session()->all());
         return view('blog.create');
     }
 

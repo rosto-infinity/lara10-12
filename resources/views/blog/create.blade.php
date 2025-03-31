@@ -19,6 +19,17 @@
             @enderror
         </div>
         <div>
+            <label for="slug" class="block text-sm font-medium text-gray-700">Slug</label>
+            <input type="text" name="slug" id="slug" value="{{ old('slug') }}"
+                   class="w-full mt-1 p-2 border border-gray-300 rounded-lg focus:ring focus:ring-green-200 focus:border-green-500">
+            @error('slug')
+                <p class="text-red-500 text-sm mt-1">
+                  {{-- Le champ slug est obligatoire. --}}
+                  {{ $message }}
+                </p>
+            @enderror
+       
+        <div>
             <label for="content" class="block text-sm font-medium text-gray-700">Contenu</label>
             <textarea name="content" id="content" rows="5" 
                       class="w-full mt-1 p-2 border border-gray-300 rounded-lg focus:ring focus:ring-green-200 focus:border-green-500"></textarea>
