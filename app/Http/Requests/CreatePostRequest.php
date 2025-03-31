@@ -25,7 +25,8 @@ class CreatePostRequest extends FormRequest
     {
         return [
             'title' => ['required', 'string', 'min:8'], // Règles pour le titre
-            'slug' => ['required', 'min:8', 'regex:/^[0-9a-z\-]+$/', Rule::unique ('posts')->ignore($this->route()->parameter('post'))], // Règles pour le slug
+            // 'slug' => ['required', 'min:8', 'regex:/^[0-9a-z\-]+$/', 'unique:posts'], // Règles pour le slug
+             'slug' => ['required', 'min:8', 'regex:/^[0-9a-z\-]+$/', Rule::unique ('posts')->ignore($this->route()->parameter('post'))], // Règles pour le slug
             'content' => ['required', 'string', 'min:20'], // Règles pour le contenu
         ];
     }
