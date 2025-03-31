@@ -4,12 +4,12 @@ return [
 
     /*
     |--------------------------------------------------------------------------
-    | Application Name
+    | Nom de l'application
     |--------------------------------------------------------------------------
     |
-    | This value is the name of your application, which will be used when the
-    | framework needs to place the application's name in a notification or
-    | other UI elements where an application name needs to be displayed.
+    | Cette valeur est le nom de votre application, qui sera utilisé lorsque le
+    | framework doit placer le nom de l'application dans une notification ou
+    | d'autres éléments UI où le nom de l'application doit être affiché.
     |
     */
 
@@ -17,12 +17,13 @@ return [
 
     /*
     |--------------------------------------------------------------------------
-    | Application Environment
+    | Environnement de l'application
     |--------------------------------------------------------------------------
     |
-    | This value determines the "environment" your application is currently
-    | running in. This may determine how you prefer to configure various
-    | services the application utilizes. Set this in your ".env" file.
+    | Cette valeur détermine l'« environnement » dans lequel votre application
+    | s'exécute actuellement. Cela peut déterminer comment vous préférez
+    | configurer divers services que l'application utilise. Définissez cela
+    | dans votre fichier ".env".
     |
     */
 
@@ -30,12 +31,13 @@ return [
 
     /*
     |--------------------------------------------------------------------------
-    | Application Debug Mode
+    | Mode débogage de l'application
     |--------------------------------------------------------------------------
     |
-    | When your application is in debug mode, detailed error messages with
-    | stack traces will be shown on every error that occurs within your
-    | application. If disabled, a simple generic error page is shown.
+    | Lorsque votre application est en mode débogage, des messages d'erreur
+    | détaillés avec des traces de pile seront affichés à chaque erreur qui
+    | se produit dans votre application. Si désactivé, une simple page d'erreur
+    | générique est affichée.
     |
     */
 
@@ -43,12 +45,13 @@ return [
 
     /*
     |--------------------------------------------------------------------------
-    | Application URL
+    | URL de l'application
     |--------------------------------------------------------------------------
     |
-    | This URL is used by the console to properly generate URLs when using
-    | the Artisan command line tool. You should set this to the root of
-    | the application so that it's available within Artisan commands.
+    | Cette URL est utilisée par la console pour générer correctement des URLs
+    | lors de l'utilisation de l'outil en ligne de commande Artisan. Vous devez
+    | définir cela à la racine de l'application afin qu'elle soit disponible
+    | dans les commandes Artisan.
     |
     */
 
@@ -56,12 +59,13 @@ return [
 
     /*
     |--------------------------------------------------------------------------
-    | Application Timezone
+    | Fuseau horaire de l'application
     |--------------------------------------------------------------------------
     |
-    | Here you may specify the default timezone for your application, which
-    | will be used by the PHP date and date-time functions. The timezone
-    | is set to "UTC" by default as it is suitable for most use cases.
+    | Ici, vous pouvez spécifier le fuseau horaire par défaut pour votre
+    | application, qui sera utilisé par les fonctions de date et de date-heure
+    | de PHP. Le fuseau horaire est défini par défaut sur "UTC" car il est
+    | approprié pour la plupart des cas d'utilisation.
     |
     */
 
@@ -69,12 +73,13 @@ return [
 
     /*
     |--------------------------------------------------------------------------
-    | Application Locale Configuration
+    | Configuration de la locale de l'application
     |--------------------------------------------------------------------------
     |
-    | The application locale determines the default locale that will be used
-    | by Laravel's translation / localization methods. This option can be
-    | set to any locale for which you plan to have translation strings.
+    | La locale de l'application détermine la locale par défaut qui sera utilisée
+    | par les méthodes de traduction / localisation de Laravel. Cette option peut
+    | être définie sur n'importe quelle locale pour laquelle vous prévoyez d'avoir
+    | des chaînes de traduction.
     |
     */
 
@@ -86,12 +91,13 @@ return [
 
     /*
     |--------------------------------------------------------------------------
-    | Encryption Key
+    | Clé de chiffrement
     |--------------------------------------------------------------------------
     |
-    | This key is utilized by Laravel's encryption services and should be set
-    | to a random, 32 character string to ensure that all encrypted values
-    | are secure. You should do this prior to deploying the application.
+    | Cette clé est utilisée par les services de chiffrement de Laravel et doit
+    | être définie sur une chaîne aléatoire de 32 caractères pour garantir que
+    | toutes les valeurs chiffrées sont sécurisées. Vous devez le faire avant
+    | de déployer l'application.
     |
     */
 
@@ -107,14 +113,14 @@ return [
 
     /*
     |--------------------------------------------------------------------------
-    | Maintenance Mode Driver
+    | Pilote du mode maintenance
     |--------------------------------------------------------------------------
     |
-    | These configuration options determine the driver used to determine and
-    | manage Laravel's "maintenance mode" status. The "cache" driver will
-    | allow maintenance mode to be controlled across multiple machines.
+    | Ces options de configuration déterminent le pilote utilisé pour déterminer et
+    | gérer l'état du « mode maintenance » de Laravel. Le pilote "cache"
+    | permettra de contrôler le mode maintenance sur plusieurs machines.
     |
-    | Supported drivers: "file", "cache"
+    | Pilotes pris en charge : "file", "cache"
     |
     */
 
