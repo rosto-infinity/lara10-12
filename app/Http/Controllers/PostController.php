@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-
+use App\Http\Requests\CreatePostRequest;
 use Illuminate\Support\Str;
 use App\Models\Post;
 use Illuminate\Http\Request;
@@ -68,13 +68,9 @@ class PostController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(Request $request)
+    public function store(CreatePostRequest $request)
     {
-        $post =Post::create([
-            'title'=> $request->input('title'),
-            'content'=> $request->input('content'),
-            'slug'=> Str::slug($request->input('title'))
-        ]);
+        $post =Post::create($request->validated());
     
        // Utilisation de $post pour récupérer slug et id
     return redirect()->route('blog.show', ['slug' => $post->slug, 'id' => $post->id])

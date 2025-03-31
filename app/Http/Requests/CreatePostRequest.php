@@ -2,6 +2,7 @@
 
 namespace App\Http\Requests;
 
+use Illuminate\Support\Str;
 use Illuminate\Foundation\Http\FormRequest;
 
 class CreatePostRequest extends FormRequest
@@ -22,9 +23,16 @@ class CreatePostRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'title' => ['required', 'string', 'max:255'], // Règles pour le titre
-            'content' => ['required', 'string'], // Règles pour le contenu
+            'title' => ['required', 'string', 'min:8'], // Règles pour le titre
             'slug' => ['required', 'string', 'max:255', 'unique:posts,slug'], // Règles pour le slug
+            'content' => ['required', 'string', 'min:20'], // Règles pour le contenu
         ];
+    }
+    protected function prepareForValidation()
+    {
+        $this->merge([
+            'slug' => $this->input('slug') ?: Str::slug($this->input('title')),
+            // 'slug' => Str::slug($this->input('title')),
+        ]);
     }
 }
