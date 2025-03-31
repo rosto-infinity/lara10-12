@@ -27,7 +27,7 @@
             </nav>
         </header>
         
-        <div class="p-2.5">  
+        <div class="px-10 py-5 lg:px-20 lg:py-10">  
             @yield('content')
         </div>   
                
