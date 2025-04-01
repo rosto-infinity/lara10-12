@@ -45,7 +45,14 @@
             @enderror
         </div>
         <button type="submit" 
-                class="w-full bg-green-500 text-white p-2 rounded-lg hover:bg-green-600 transition">Enregistrer</button>
+                class="w-full bg-green-500 text-white p-2 rounded-lg hover:bg-green-600 transition">
+                @if ($post->id)
+                  Modifier
+                @else   
+                 Créer
+                @endif
+              
+              </button>
     </form>
 </div>
 @endsection
