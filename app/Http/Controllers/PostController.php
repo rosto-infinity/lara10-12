@@ -1,13 +1,8 @@
 <?php
-
 namespace App\Http\Controllers;
 
 use App\Http\Requests\FormPostRequest;
-use Illuminate\Support\Str;
 use App\Models\Post;
-use Illuminate\Http\Request;
-use Illuminate\Http\RedirectResponse;
-
 
 class PostController extends Controller
 {
@@ -29,8 +24,8 @@ class PostController extends Controller
         // $posts = Post::select('id', 'title')->get();
         // dd($posts);
 
-    //   $posts = Post::orderBy('created_at', 'desc')->get();
-    //     dd($posts);
+        //   $posts = Post::orderBy('created_at', 'desc')->get();
+        //     dd($posts);
 
 //     $posts = Post::limit(3)->get();
 // // Retourne les 5 premiers posts
@@ -43,19 +38,22 @@ class PostController extends Controller
         // dd($posts);
         $posts = Post::orderBy('created_at', 'desc')->paginate(3);
 
-       return  view('blog.index', compact('posts'));
+        return view('blog.index', compact('posts'));
+        
     }
     // public function show(string $slug, string $id)
     public function show(string $slug, string $id)
     {
-        
+
         $post = Post::findOrFail($id);
+
         // dd($post);
+
         if ($post->slug !== $slug) {
-            return  to_route('blog.show', ['slug' => $post->slug, 'id' => $post->id]);
+            return to_route('blog.show', ['slug' => $post->slug, 'id' => $post->id]);
         }
-        return  view('blog.show', compact('post'));
-   }
+        return view('blog.show', compact('post'));
+    }
 
     /**
      * Show the form for creating a new resource.
@@ -64,8 +62,9 @@ class PostController extends Controller
     {
         // dd(session()->all());
         $post = new Post();
-        return view('blog.create',[
-            'post' => $post
+
+        return view('blog.create', [
+            'post' => $post,
         ]);
     }
 
@@ -74,14 +73,12 @@ class PostController extends Controller
      */
     public function store(FormPostRequest $request)
     {
-        $post =Post::create($request->validated());
-    
-       // Utilisation de $post pour récupérer slug et id
-    return redirect()->route('blog.show', ['slug' => $post->slug, 'post' => $post->id])
-    ->with('success', 'Article créé avec succès');
-    }
+        $post = Post::create($request->validated());
 
-   
+        // Utilisation de $post pour récupérer slug et id
+        return redirect()->route('blog.show', ['slug' => $post->slug, 'post' => $post->id])
+            ->with('success', 'Article créé avec succès');
+    }
 
     /**
      * Show the form for editing the specified resource.
@@ -106,11 +103,11 @@ class PostController extends Controller
         // dd($request->input('content'));
         // dd($post->id);
         // dd($post->slug);
-    
+
         //
         $post->update($request->validated());
         return redirect()->route('blog.show', ['slug' => $post->slug, 'post' => $post->id])
-        ->with('success', 'Article  a bien été sauvegarder');
+            ->with('success', 'Article  a bien été sauvegarder');
     }
 
     /**

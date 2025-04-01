@@ -40,11 +40,12 @@
             @error('content')
                 <p class="text-red-500 text-sm mt-1">
                   {{-- Le champ contenu est obligatoire. --}}
-                  {{ $message }}
+                  {{ $message}}
                 </p>
             @enderror
         </div>
         <button type="submit" 
+       
                 class="w-full bg-green-500 text-white p-2 rounded-lg hover:bg-green-600 transition">
                 @if ($post->id)
                   Modifier
