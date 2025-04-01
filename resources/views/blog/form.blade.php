@@ -49,7 +49,7 @@
                 @if ($post->id)
                   Modifier
                 @else   
-                 Créer
+                  Créer
                 @endif
               
               </button>
