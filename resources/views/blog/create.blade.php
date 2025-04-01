@@ -1,5 +1,5 @@
 @extends('layout')
-@section('title', 'Créer article')
+@section('title', 'Créer un article article')
 @section('content')
 <div class="max-w-2xl mx-auto bg-white p-6 rounded-lg shadow-md mt-10">
     <h2 class="text-2xl font-bold text-gray-800 mb-4">Créer un nouvel article</h2>
