@@ -113,7 +113,7 @@ return [
 
     /*
     |--------------------------------------------------------------------------
-    | Pilote du mode maintenance
+    | 5-Pilote du mode maintenance
     |--------------------------------------------------------------------------
     |
     | Ces options de configuration déterminent le pilote utilisé pour déterminer et
