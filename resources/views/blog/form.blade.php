@@ -14,7 +14,7 @@
                    
             @error('title')
                 <p class="text-red-500 text-sm mt-1">
-                  {{-- Le champ titre est obligatoire. --}}
+                  {{-- 3-Le champ titre est obligatoire. --}}
                   {{ $message }}
                 </p>
             @enderror
