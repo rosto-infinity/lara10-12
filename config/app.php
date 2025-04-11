@@ -31,7 +31,7 @@ return [
 
     /*
     |--------------------------------------------------------------------------
-    | Mode débogage de l'application
+    | 9-Mode débogage de l'application
     |--------------------------------------------------------------------------
     |
     | Lorsque votre application est en mode débogage, des messages d'erreur
