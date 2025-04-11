@@ -91,7 +91,7 @@ class PostController extends Controller
     }
 
     /**
-     * Update the specified resource in storage.
+     * 5-Update the specified resource in storage.
      */
     public function update(FormPostRequest $request, Post $post)
     {
