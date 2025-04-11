@@ -62,7 +62,7 @@ return [
     | 6-Fuseau horaire de l'application
     |--------------------------------------------------------------------------
     |
-    | Ici, vous pouvez spécifier le fuseau horaire par défaut pour votre
+    | 7-Ici, vous pouvez spécifier le fuseau horaire par défaut pour votre
     | application, qui sera utilisé par les fonctions de date et de date-heure
     | de PHP. Le fuseau horaire est défini par défaut sur "UTC" car il est
     | approprié pour la plupart des cas d'utilisation.
