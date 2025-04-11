@@ -45,7 +45,7 @@ return [
 
     /*
     |--------------------------------------------------------------------------
-    | URL de l'application
+    | 10-URL de l'application
     |--------------------------------------------------------------------------
     |
     | Cette URL est utilisée par la console pour générer correctement des URLs
