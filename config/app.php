@@ -59,7 +59,7 @@ return [
 
     /*
     |--------------------------------------------------------------------------
-    | Fuseau horaire de l'application
+    | 6-Fuseau horaire de l'application
     |--------------------------------------------------------------------------
     |
     | Ici, vous pouvez spécifier le fuseau horaire par défaut pour votre
