@@ -95,6 +95,10 @@ class PostController extends Controller
      */
     public function update(FormPostRequest $request, Post $post)
     {
+        
+        $post->update($request->validated());
+        return redirect()->route('blog.show', ['slug' => $post->slug, 'post' => $post->id])
+            ->with('success', 'Article  a bien été sauvegarder');
         // dd($request->validated());
         // dd($post);
         // dd($request->all());
@@ -105,9 +109,7 @@ class PostController extends Controller
         // dd($post->slug);
 
         //
-        $post->update($request->validated());
-        return redirect()->route('blog.show', ['slug' => $post->slug, 'post' => $post->id])
-            ->with('success', 'Article  a bien été sauvegarder');
+        
     }
 
     /**

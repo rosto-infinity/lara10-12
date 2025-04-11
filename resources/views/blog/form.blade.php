@@ -26,7 +26,7 @@
                    class="w-full mt-1 p-2 border border-gray-300 rounded-lg focus:ring focus:ring-green-200 focus:border-green-500">
             @error('slug')
                 <p class="text-red-500 text-sm mt-1">
-                  {{-- Le champ slug est obligatoire. --}}
+                  {{-- 1-Le champ slug est obligatoire. --}}
                   {{ $message }}
                 </p>
             @enderror
@@ -39,7 +39,7 @@
                       class="w-full mt-1 p-2 border border-gray-300 rounded-lg focus:ring focus:ring-green-200 focus:border-green-500">{{ old('content', $post->content) }}</textarea>
             @error('content')
                 <p class="text-red-500 text-sm mt-1">
-                  {{-- Le champ contenu est obligatoire. --}}
+                  {{-- 2-Le champ contenu est obligatoire. --}}
                   {{ $message}}
                 </p>
             @enderror
