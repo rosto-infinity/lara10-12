@@ -73,7 +73,7 @@ return [
 
     /*
     |--------------------------------------------------------------------------
-    | Configuration de la locale de l'application
+    | 8-Configuration de la locale de l'application
     |--------------------------------------------------------------------------
     |
     | La locale de l'application détermine la locale par défaut qui sera utilisée
