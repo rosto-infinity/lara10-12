@@ -91,7 +91,7 @@ return [
 
     /*
     |--------------------------------------------------------------------------
-    | Clé de chiffrement
+    | 9-Clé de chiffrement
     |--------------------------------------------------------------------------
     |
     | Cette clé est utilisée par les services de chiffrement de Laravel et doit
